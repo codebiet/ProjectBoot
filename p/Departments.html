@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+  <title>Departments</title>
+  <style>
+    .branch {
+      text-align: center;
+      color: red;
+      font-size: 2rem;
+      padding: 10px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      /* height: 1000px; */
+      /* background-color:yellow; */
+    }
+
+    .dep {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+    }
+
+    .cbtn {
+      background-color: white;
+      color: blue;
+      margin: 2px;
+      padding: 10px;
+      outline: 1px solid grey;
+      border-radius: 0px;
+      font-weight: bold;
+      height: 100px;
+
+    }
+
+    .cc {
+      width: 800px;
+      /* background-color: red; */
+      border: outset;
+      padding: 5px;
+
+    }
+
+    .dp {
+      color: blue;
+      background-color: rgb(238, 225, 225);
+      padding: 10px;
+    }
+
+    .dp1 {
+      color: red;
+
+      font-size: 17px;
+
+
+    }
+
+    .dp2 {
+      color: red;
+
+      font-size: 17px;
+      padding: 5px;
+      margin-top: 20px;
+    }
+
+    .text {
+      margin-left: 10px;
+
+    }
+
+    .firstbtn {
+      background-color: blue;
+      color: white;
+    }
+
+    /* ------------------------------------------ */
+    table {
+      width: 100%;
+    }
+
+    table,
+    td {
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    /* --------------------- */
+    .fac {
+      display: flex;
+    }
+
+    .cards {
+      border: 1px solid rgb(221, 212, 212);
+      border-bottom: 2px solid blue;
+      width: 350px;
+      height: auto;
+      display: flex;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    .ima {
+      margin: 10px;
+    }
+
+    .facs {
+
+      color: blue;
+      border-bottom: 1px solid rgb(189, 182, 182);
+    }
+
+    .factype {
+
+      color: black;
+      border-bottom: 1px solid rgb(189, 182, 182);
+    }
+
+    .facbranch {
+      border-bottom: 1px solid rgb(243, 236, 236);
+
+
+    }
+
+    .facmail {
+      border-bottom: 1px solid rgb(243, 236, 236);
+    }
+
+    .facmob {
+      border-bottom: 1px solid rgb(243, 236, 236);
+
+    }
+
+    .profile {
+      color: white;
+      background-color: green;
+      border-style: none;
+      padding: 6px;
+    }
+
+    /* ------------------------------ */
+    .tech {
+      background-color: blue;
+      color: white;
+    }
+
+    /* ------------------------------ */
+    @media only screen and (min-width:300px) and (max-width: 400px) {
+      .dep {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        width: 340px;
+      }
+
+      .cc {
+        width: 340px;
+        border: none;
+      }
+
+      .fac {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cards {
+        width: 340px;
+      }
+
+    }
+
+    @media only screen and (min-width:400px) and (max-width: 500px) {
+      .dep {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        width: 400px;
+      }
+
+      .cc {
+        width: 400px;
+        border: none;
+      }
+
+      .fac {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cards {
+        width: 400px;
+      }
+    }
+
+    @media only screen and (min-width:500px) and (max-width: 600px) {
+      .dep {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        width: 500px;
+      }
+
+      .cc {
+        width: 500px;
+        border: none;
+      }
+
+      .fac {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cards {
+        width: 500px;
+      }
+
+    }
+
+    @media only screen and (min-width:600px) and (max-width: 768px) {
+      .dep {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        width: 600px;
+      }
+
+      .cc {
+        width: 600px;
+        border: none;
+      }
+
+      .fac {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cards {
+        width: 600px;
+      }
+
+    }
+
+    /* ----------------------------- */
+    .biet {
+      background-color: blue;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .home {
+      color: white;
+      background-color: #1ab2e3;
+      border-style: none;
+      padding: 6px;
+      width: 100px;
+    }
+
+    /* ------------------------------- */
+    .footdp {
+      position: sticky;
+      bottom: 0px;
+      text-align: center;
+      color: white;
+      background-color: #1ab2e3;
+      padding: 20px;
+
+    }
+
+    /* --------------------------- */
+
+    #cc {
+      display: block;
+    }
+
+    #cc1 {
+      display: none;
+    }
+
+    #cc2 {
+      display: none;
+    }
+
+    #cc3 {
+      display: none;
+    }
+
+    #cc4 {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="biet">
+    <h1>B.I.E.T. Jhansi</h1>
+    <a href="index.html"><button class="home" type="button">Home</button></a>
+  </div>
+  <h1 class="branch">Computer Science and Engineering</h1>
+  <hr>
+  <div class="container dep">
+    <div class="container content">
+      <button type="button" class="btn cbtn firstbtn" id="department" onClick="dep()">Department Profile</button>
+      <button type="button" class="btn cbtn" id="academic" onClick="dep1()">Academic Profile</button>
+      <button type="button" class="btn cbtn" id="faculty" onClick="dep2()">Faculty</button>
+      <button type="button" class="btn cbtn" id="staff" onClick="dep3()">Technical/Supporting Staff</button>
+      <button type="button" class="btn cbtn" id="laboratory" onClick="dep4()">Laboratories</button>
+    </div>
+    <div class="container cc" id="cc">
+      <p class="dp">Department Profile</p>
+      <hr>
+      <p class="dp1"><b>Department Profile</b></p>
+      <hr>
+      <p class="text">
+        The Department of Computer Science and Engineering was established in 1989 with intake of 30 students. The
+        department is a member of the Computer Society of India (CSI) and ISTE. It offers a four year degree programme
+        in Computer Science and Engineering with an annual intake of 60 students. The department has a Software
+        Development Lab, Information System Lab, Computer Graphics Lab, UNIX and LINUX Lab, and a Database Management
+        Lab. The unique feature of college is SUN Java Lab, which is not available in any other college of UPTU. The
+        state-of-the-art laboratories are equipped with latest configuration hardware and software. Although, emphasis
+        is given on use and promotion of open source software and systems, laboratories are also equipped with
+        proprietary software such as Rational Software Architect, Rational Functional Tester and Rational Quality
+        Manager (IBM). In the department, we have elite faculty members with excellent teaching experience. Our
+        institute is affiliated to GBTU, Lucknow and our curriculum has world class norms, in order to provide not only
+        the informational but also to provide and knowledge to create wisdom in this field.
+      </p>
+      <p class="dp1"><b>Vision</b></p>
+      <hr>
+      <p class="text">To achieve leadership in the field of Computer Science & Engineering by strengthening fundamentals
+        and facilitating interdisciplinary sustainable research to meet the ever growing needs of the society.
+      </p>
+      <p class="dp1"><b>Mission</b></p>
+      <hr>
+      <p class="text">To evolve continually as a centre of excellence in quality education in computers and allied
+        fields. To develop state-of-the-art infrastructure and create environment capable for interdisciplinary research
+        and skill enhancement. To collaborate with industries and institutions at national and international levels to
+        enhance research in emerging areas. To develop professionals having social concern to become leaders in
+        top-notch industries and/or become entrepreneurs with good ethics.
+      </p>
+    </div>
+
+    <div class="container cc" id="cc1">
+      <p class="dp">Academic Profile</p>
+      <hr>
+      <p class="dp1"><b>2014-15 Pass out Gate Record</b></p>
+      <hr>
+      <table>
+
+        <tr>
+          <td class="srn">1.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">2.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">3.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">4.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">5.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+
+
+
+
+      </table>
+      <p class="dp2"><b>2014-15 Pass out Gate Record</b></p>
+      <hr>
+      <table>
+
+        <tr>
+          <td class="srn">1.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">2.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">3.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">4.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+        <tr>
+          <td class="srn">5.</td>
+          <td class="names">Abhishek Shrivastava</td>
+          <td class="roll">1104310003</td>
+          <td class="company">TCS</td>
+        </tr>
+
+
+
+
+      </table>
+      <p class="dp2"><b>List of CS Deptt</b></p>
+      <hr>
+      <table>
+
+        <tr>
+          <td class="srn">SR NO.</td>
+          <td class="roll">Roll No.</td>
+          <td class="names">Name of the Student</td>
+          <td class="bran">Branch</td>
+          <td class="gate">Gate Score</td>
+          <td class="air">All India rank</td>
+        </tr>
+
+        <tr>
+          <td class="srn">1.</td>
+          <td class="roll">CS18S35005197</td>
+          <td class="names">Nitish Joshi</td>
+          <td class="bran">CS</td>
+          <td class="gate">945</td>
+          <td class="air">14</td>
+        </tr>
+        <tr>
+          <td class="srn">2.</td>
+          <td class="roll">CS18S35005197</td>
+          <td class="names">Nitish Joshi</td>
+          <td class="bran">CS</td>
+          <td class="gate">945</td>
+          <td class="air">14</td>
+        </tr>
+        <tr>
+          <td class="srn">3.</td>
+          <td class="roll">CS18S35005197</td>
+          <td class="names">Nitish Joshi</td>
+          <td class="bran">CS</td>
+          <td class="gate">945</td>
+          <td class="air">14</td>
+        </tr>
+        <tr>
+          <td class="srn">4.</td>
+          <td class="roll">CS18S35005197</td>
+          <td class="names">Nitish Joshi</td>
+          <td class="bran">CS</td>
+          <td class="gate">945</td>
+          <td class="air">14</td>
+        </tr>
+
+        <tr>
+          <td class="srn">5.</td>
+          <td class="roll">CS18S35005197</td>
+          <td class="names">Nitish Joshi</td>
+          <td class="bran">CS</td>
+          <td class="gate">945</td>
+          <td class="air">14</td>
+        </tr>
+
+
+
+
+
+
+      </table>
+    </div>
+
+    <div class="container cc" id="cc2">
+      <p class="dp">Faculty</p>
+      <hr>
+      <div class="fa">
+        <div class="fac">
+          <div class="cards">
+            <div class="ima">
+              <img src="f1.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="ima">
+              <img src="f2.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="fa">
+        <div class="fac">
+          <div class="cards">
+            <div class="ima">
+              <img src="f3.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="ima">
+              <img src="f4.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="fa">
+        <div class="fac">
+          <div class="cards">
+            <div class="ima">
+              <img src="f5.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="ima">
+              <img src="f1.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="fa">
+        <div class="fac">
+          <div class="cards">
+            <div class="ima">
+              <img src="f2.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="ima">
+              <img src="f1.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="fa">
+        <div class="fac">
+          <div class="cards">
+            <div class="ima">
+              <img src="f3.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="ima">
+              <img src="f4.gif" width="100px" height="100px" alt="">
+            </div>
+            <div class="about">
+              <span class="facs">Prof. A.K. Solanki</span>
+              <br>
+              <span class="factype">Professor</span>
+              <br>
+              <span class="facbranch">&#9743; Computer Science and Engineering</span><br>
+              <span class="facmail"> solankibiet13@gmail.com</span><br>
+              <span class="facmob">&#9743; 9415060081</span><br>
+              <button type="button" class="profile">View Profile</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container cc" id="cc3">
+      <p class="dp">Technical/Supporting Staff</p>
+      <hr>
+
+      <table>
+
+        <tr class="tech">
+
+          <td class="names">Name of the Staff</td>
+          <td class="desiignation">Designation</td>
+          <td class="email">Email</td>
+        </tr>
+        <tr>
+
+          <td class="names">S. S. Rajpoot</td>
+          <td class="desiignation">System Manager</td>
+          <td class="email"></td>
+        </tr>
+        <tr>
+
+          <td class="names">Akhilesh Kumar Yadav</td>
+          <td class="desiignation">Junior ProgrammerJunior Programmer</td>
+          <td class="email"></td>
+        </tr>
+        <tr>
+
+          <td class="names">Balveer Singh</td>
+          <td class="desiignation"> Computer Operator</td>
+          <td class="email"></td>
+        </tr>
+        <tr>
+
+          <td class="names">Manoj Kumar Srivastava</td>
+          <td class="desiignation">Key Punch Operator</td>
+          <td class="email"></td>
+        </tr>
+        <tr>
+
+          <td class="names">Devendra Diwedi</td>
+          <td class="desiignation">Lab Assistant</td>
+          <td class="email"></td>
+        </tr>
+        <tr>
+
+          <td class="names">Hare Ram</td>
+          <td class="desiignation">Lab Assistant</td>
+          <td class="email"></td>
+        </tr>
+
+      </table>
+
+
+    </div>
+    <div class="container cc" id="cc4">
+      <p class="dp">Laboratories</p>
+      <hr>
+      <p class="dp1"><b>Departmental Laboratories</b></p>
+      <hr>
+      <h4 class="lab">LAB 1:</h4>
+
+      <p class="text">
+        Intel Core Duo CPU 2.0 GHz E-7300, RAM: 2037 MB, HDD: 100 GB Operating System lab uses the Microsoft Window (XP)
+        to implement the operating system management process, memory function and shell programming related to OS
+        functions.
+      </p>
+      <hr>
+      <h4 class="lab">LAB 2:</h4>
+      <p class="text">
+        HCL INFOSYSTEMS Limited Model HCL_PC Intel (R )Core 2 Duo CPU 2.67 GHz, RAM: 2 GB, HDD: 200 GB Microsoft Window
+        (XP-Pro)32 bit operating Systems.</p>
+      <hr>
+      <h4 class="lab">LAB 3:</h4>
+      <p class="text">Intel Core 2 Duo 4790 3.60GHz, RAM: 8 GB, HDD 500 GB , Microsoft Windows 7 64 bit operating
+        System, X-64based Processor.
+      </p>
+      <hr>
+      <h4 class="lab">LAB 4:</h4>
+      <p class="text">Intel P4 3.00 GHz, RAM: 1 GB, HDD: 80GB Hardware: LAN Trainer Kit (10 no.). Soft Computing lab use
+        Statistica software for supervised learning analysis and data mining and also used the LAN Trainer kit for
+        network topology.
+      </p>
+      <hr>
+      <h4 class="lab">LAB 5:</h4>
+      <p class="text">Intel Corei5-6500,3.2GHz, RAM: 4 GB, HDD 500GB Microsoft Windows 8 64 bit operating System,
+        X-64based Processor.
+      </p>
+
+    </div>
+
+
+  </div>
+  <footer class="footdp">
+    © 2020 BIET, JHANSI, U.P, INDIA. POWERED BY OMNI-NET
+  </footer>
+
+  <script>
+    function dep() {
+      document.getElementById('department').style.backgroundColor = "blue";
+      document.getElementById('department').style.color = "white";
+      document.getElementById('academic').style.backgroundColor = "white";
+      document.getElementById('academic').style.color = "blue";
+      document.getElementById('faculty').style.backgroundColor = "white";
+      document.getElementById('faculty').style.color = "blue";
+      document.getElementById('staff').style.backgroundColor = "white";
+      document.getElementById('staff').style.color = "blue";
+      document.getElementById('laboratory').style.backgroundColor = "white";
+      document.getElementById('laboratory').style.color = "blue";
+
+      document.getElementById('cc').style.display = "block";
+      document.getElementById('cc1').style.display = "none";
+      document.getElementById('cc2').style.display = "none";
+      document.getElementById('cc3').style.display = "none";
+      document.getElementById('cc4').style.display = "none";
+
+    }
+
+
+
+    function dep1() {
+      document.getElementById('department').style.backgroundColor = "white";
+      document.getElementById('department').style.color = "blue";
+      document.getElementById('academic').style.backgroundColor = "blue";
+      document.getElementById('academic').style.color = "white";
+      document.getElementById('faculty').style.backgroundColor = "white";
+      document.getElementById('faculty').style.color = "blue";
+      document.getElementById('staff').style.backgroundColor = "white";
+      document.getElementById('staff').style.color = "blue";
+      document.getElementById('laboratory').style.backgroundColor = "white";
+      document.getElementById('laboratory').style.color = "blue";
+
+
+      document.getElementById('cc').style.display = "none";
+      document.getElementById('cc1').style.display = "block";
+      document.getElementById('cc2').style.display = "none";
+      document.getElementById('cc3').style.display = "none";
+      document.getElementById('cc4').style.display = "none";
+    }
+
+
+    function dep2() {
+      document.getElementById('department').style.backgroundColor = "white";
+      document.getElementById('department').style.color = "blue";
+      document.getElementById('academic').style.backgroundColor = "white";
+      document.getElementById('academic').style.color = "blue";
+      document.getElementById('faculty').style.backgroundColor = "blue";
+      document.getElementById('faculty').style.color = "white";
+      document.getElementById('staff').style.backgroundColor = "white";
+      document.getElementById('staff').style.color = "blue";
+      document.getElementById('laboratory').style.backgroundColor = "white";
+      document.getElementById('laboratory').style.color = "blue";
+
+      document.getElementById('cc').style.display = "none";
+      document.getElementById('cc1').style.display = "none";
+      document.getElementById('cc2').style.display = "block";
+      document.getElementById('cc3').style.display = "none";
+      document.getElementById('cc4').style.display = "none";
+    }
+
+
+    function dep3() {
+      document.getElementById('department').style.backgroundColor = "white";
+      document.getElementById('department').style.color = "blue";
+      document.getElementById('academic').style.backgroundColor = "white";
+      document.getElementById('academic').style.color = "blue";
+      document.getElementById('faculty').style.backgroundColor = "white";
+      document.getElementById('faculty').style.color = "blue";
+      document.getElementById('staff').style.backgroundColor = "blue";
+      document.getElementById('staff').style.color = "white";
+      document.getElementById('laboratory').style.backgroundColor = "white";
+      document.getElementById('laboratory').style.color = "blue";
+
+      document.getElementById('cc').style.display = "none";
+      document.getElementById('cc1').style.display = "none";
+      document.getElementById('cc2').style.display = "none";
+      document.getElementById('cc3').style.display = "block";
+      document.getElementById('cc4').style.display = "none";
+    }
+
+
+    function dep4() {
+      document.getElementById('department').style.backgroundColor = "white";
+      document.getElementById('department').style.color = "blue";
+      document.getElementById('academic').style.backgroundColor = "white";
+      document.getElementById('academic').style.color = "blue";
+      document.getElementById('faculty').style.backgroundColor = "white";
+      document.getElementById('faculty').style.color = "blue";
+      document.getElementById('staff').style.backgroundColor = "white";
+      document.getElementById('staff').style.color = "blue";
+      document.getElementById('laboratory').style.backgroundColor = "blue";
+      document.getElementById('laboratory').style.color = "white";
+
+      document.getElementById('cc').style.display = "none";
+      document.getElementById('cc1').style.display = "none";
+      document.getElementById('cc2').style.display = "none";
+      document.getElementById('cc3').style.display = "none";
+      document.getElementById('cc4').style.display = "block";
+    }
+  </script>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

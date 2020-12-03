@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <title>Sign Up</title>
+
+    <style>
+        body {
+            font-family: serif;
+            font-size: 20px;
+        }
+
+
+
+
+        input {
+            color: white;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid white;
+            outline: 0;
+            width: 270px;
+            margin-bottom: 7px;
+
+        }
+
+        label {
+            padding-top: 15px;
+            color: orange;
+            text-shadow: 4px 3px 6px orange;
+
+        }
+
+        .img1 {
+            width: 500px;
+            height: 750px;
+            border: 2px groove black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .signin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .forms {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+
+        }
+
+        .images1 {
+            background-color: black;
+            width: 500px;
+            height: 750px;
+        }
+
+
+        .si {
+            float: right;
+            margin: 10px;
+        }
+
+        .sii {
+            border-radius: 10px 0px 10px;
+            margin: 0;
+            color: white;
+            background-color: black;
+            opacity: 0.7;
+            border-style: none;
+        }
+
+        .sii2 {
+            border-radius: 10px 0px 10px;
+            margin: 0;
+            color: white;
+            background-color: orange;
+            border-style: none;
+
+        }
+
+        .sii:hover {
+            background-color: orange;
+            opacity: 1;
+        }
+
+
+        .login {
+            border-radius: 30px;
+            color: white;
+            background-color: orange;
+            border-style: none;
+            width: 50%;
+
+        }
+
+        .login:hover {
+            background-color: #db9516;
+            color: white;
+
+        }
+
+        .fff {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputfield {
+            text-align: center;
+            color: white;
+
+        }
+
+        .inputfield[placeholder] {
+            padding-bottom: 5px;
+
+        }
+
+        .agree {
+            margin-top: 10px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .signin {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .images1 {
+
+                width: 300px;
+                height: 750px;
+            }
+
+            .img1 {
+                width: 300px;
+                height: 400px;
+
+
+            }
+        }
+
+        @media only screen and (min-width:500px) and (max-width: 768px) {
+            .signin {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .images1 {
+
+                width: 500px;
+                height: 750px;
+            }
+
+            .img1 {
+                width: 500px;
+                height: 400px;
+
+
+            }
+
+
+        }
+
+        @media only screen and (min-width:768px) and (max-width: 992px) {
+
+
+            .images1 {
+
+                width: 400px;
+                height: 750px;
+            }
+
+            .img1 {
+                width: 300px;
+                height: 750px;
+
+
+            }
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid bg-primary">
+            <div class="row">
+                <div class="col-mid-4">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjcG_kfk3a3NhlCEovKHMyHPxf8ijBmqK_hg&usqp=CAU">
+                </div>
+                <div class="col-mid-8">
+                    <h1><b>Bundelkhand Institute of Engineering and Technology</b></h1>
+                    <h3><b>Jhansi UP</b></h3>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container bg-primary ">
+            <div class="row">
+                <div class="col">
+
+                    <a href="index.html" class="navbar-brand"> HOME</a>
+                </div>
+                <div class="col">
+                    <div class="dropdown">
+                        <button type="button" class="btn mr-3 btn-light dropdown-toggle" data-toggle="dropdown">
+                            About Us
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">About Institute</a>
+                            <a class="dropdown-item" href="#">Vision & Mission</a>
+                            <a class="dropdown-item" href="#">logo</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button type="button" class="btn mr-3 btn-light dropdown-toggle" data-toggle="dropdown">
+                        Academics
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Academic Programmes</a>
+                        <a class="dropdown-item" href="#">Syllabus</a>
+                        <a class="dropdown-item" href="#">Admission</a>
+                        <a class="dropdown-item" href="#">Fees Structure</a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="dropdown">
+                    <button type="button" class="btn mr-3 btn-light dropdown-toggle" data-toggle="dropdown">
+                        Departments
+                    </button>
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="Departments.html">Computer Science</a>
+                        <a class="dropdown-item" href="Departments.html">Chemical Engineering</a>
+                        <a class="dropdown-item" href="Departments.html">Civil Engineering</a>
+                        <a class="dropdown-item" href="Departments.html">Electrical Engineering</a>
+                        <a class="dropdown-item" href="Departments.html">Electronics and Communication Engineering</a>
+                        <a class="dropdown-item" href="Departments.html">Mechanical Engineering</a>
+                        <a class="dropdown-item" href="Departments.html">Information Technology</a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="dropdown">
+                    <button type="button" class="btn mr-3 btn-light dropdown-toggle" data-toggle="dropdown">
+                        Training & Placement
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Placement Statistics</a>
+                        <a class="dropdown-item" href="#">Brochure</a>
+                        <a class="dropdown-item" href="#">Recruitments</a>
+                        <a class="dropdown-item" href="#">Recruiting Partners</a>
+                    </div>
+                </div>
+                <br>
+                <a href="#" class="navbar-brand">Alumni &emsp;</a>
+                <a href="#" class="navbar-brand">Grievance Redressal &emsp;</a>
+
+                <a href="Sign_in.html"> <button type="button " class="btn mr-3 btn-primary active ">Sign In
+                    </button></a>
+                <a href="Sign_up.html"><button type="button" class="btn mr-3 btn-primary active">Sign Up</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 signin">
+        <div class="images">
+            <div class="img1">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjcG_kfk3a3NhlCEovKHMyHPxf8ijBmqK_hg&usqp=CAU">
+            </div>
+        </div>
+
+
+        <div class="images1">
+            <div class="si">
+                <a href="Sign_in.html"><button class="btn sii">Sign in</button></a>
+                <a href="Sign_up.html"><button class="btn sii2">Sign Up</button></a>
+            </div>
+
+            <div class="container my-2">
+                <form action="" class="forms">
+                    <label for="Name">Name: </label>
+                    <input type="text" name="Name" id="Name" class="inputfield" placeholder="Enter your Name" required>
+                    <label for="Email">Email: </label>
+                    <input type="email" name="Email" id="Email" class="inputfield" placeholder="Enter your Email"
+                        required>
+                    <label for="Mobile">Mobile: </label>
+                    <input type="text" name="Mobile" id="Mobile" class="inputfield" placeholder="Enter your Mobile"
+                        required>
+                    <label for="Password">Password: </label>
+                    <input type="password" name="Password" id="Password" class="inputfield"
+                        placeholder="Enter your Password" required>
+                    <label for="ConfirmPassword">Confirm Password: </label>
+                    <input type="password" name="Confirm Password" id="ConfirmPassword" class="inputfield"
+                        placeholder="Confirm Password" required>
+
+
+                    <button type="submit" class="btn btn-lg login my-4">Register</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col ">
+                    <a href="#">Contact Us &emsp;</a>
+                    <a href="#">Webmail &emsp;</a>
+                    <a href="#">Photo gallery &emsp;</a>
+                    <a href="#">Anti Ragging &emsp;</a>
+                    <a href="#">Results</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
