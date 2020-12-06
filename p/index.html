@@ -90,6 +90,92 @@
 
 
         }
+
+        /* ------------------------------------------------------ */
+        .dep {
+            /* background-color: rgb(221, 191, 191); */
+        }
+
+        .card {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+
+
+        }
+
+
+
+        .dp {
+            margin-top: 25px;
+            text-align: center;
+            color: red;
+
+        }
+
+        .dp1 {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .ch {
+            width: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 20px;
+
+
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+        }
+
+        .link:hover {
+            text-decoration: none;
+            color:rgb(134, 128, 115);
+        }
+
+        .line {
+            border-bottom: 2px solid red;
+        }
+
+        .d1 {
+            transition-property: all;
+            transition-duration: 0.5s;
+            width:200px;
+            height:150px;
+        }
+
+        .d1:hover {
+            width: 220px;
+            height: 170px;
+
+
+
+        }
+        @media only screen and (min-width:500px) and (max-width: 1100px){
+            .dp1{
+                display: flex;
+                flex-direction: column;
+            }
+            .d1{
+                width:400px;
+                height: 250px;
+            }
+
+        }
+        @media only screen and (min-width:200px) and (max-width: 500px){
+            .dp1{
+                display: flex;
+                flex-direction: column;
+            }
+            
+
+        }
     </style>
 </head>
 
@@ -363,7 +449,49 @@
     </div>
 
 
+    <div class="containers dep">
 
+        <h2 class="dp">Our Deprtments</h2>
+        <div class="container line"></div>
+        <div class="containers dp1">
+            <div class="card">
+                <a href="Departments.html" class="link">
+                    <img src="d1.jpg" alt="Chemical Engineering" class="d1">
+                    <span class="ch">Chemical Engineering</span>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Departments.html" class="link">
+                    <img src="d2.jpg" alt="Civil Engineering" class="d1">
+                    <span class="ch">Civil Engineering</span>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Departments.html" class="link">
+                    <img src="d3.jpg" alt="Computer Science" class="d1">
+                    <span class="ch">Computer Science</span>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Departments.html" class="link">
+                    <img src="d4.jpg" alt="Electrical Engineering" class="d1">
+                    <span class="ch">Electrical Engineering</span>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Departments.html" class="link">
+                    <img src="d5.jpg" alt="Electronics and Communication" class="d1">
+                    <span class="ch">Electronics and Communication</span>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Departments.html" class="link">
+                    <img src="d6.jpg" alt="Mechanical Engineering" class="d1">
+                    <span class="ch">Mechanical Engineering</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
     <footer class="bg-light">
